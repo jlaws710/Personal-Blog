@@ -28,15 +28,14 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-6">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
-              <Link href={href} legacyBehavior>
-                <a
-                  className={`px-3 py-2 rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-gray-800 ${
-                    pathname === href ? "bg-blue-600 text-white" : ""
-                  }`}
-                  aria-current={pathname === href ? "page" : undefined}
-                >
-                  {label}
-                </a>
+              <Link
+                href={href}
+                className={`px-3 py-2 rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-gray-800 ${
+                  pathname === href ? "bg-blue-600 text-white" : ""
+                }`}
+                aria-current={pathname === href ? "page" : undefined}
+              >
+                {label}
               </Link>
             </li>
           ))}
@@ -59,16 +58,15 @@ export default function Navbar() {
         <ul className="md:hidden bg-gray-900 px-4 pb-4 space-y-2 animate-fade-in">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
-              <Link href={href} legacyBehavior>
-                <a
-                  className={`block px-3 py-2 rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-gray-800 ${
-                    pathname === href ? "bg-blue-600 text-white" : ""
-                  }`}
-                  aria-current={pathname === href ? "page" : undefined}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {label}
-                </a>
+              <Link
+                href={href}
+                className={`block px-3 py-2 rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-gray-800 ${
+                  pathname === href ? "bg-blue-600 text-white" : ""
+                }`}
+                aria-current={pathname === href ? "page" : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
               </Link>
             </li>
           ))}
